@@ -1,0 +1,29 @@
+{
+  "name": "mw-portfolio",
+  "version": "1.0.0",
+  "description": "Muhammad Waseem - Senior Solution Engineer Portfolio",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "serve": "node server.mjs",
+    "iis:build": "npm run build && echo 'Build complete. Copy dist/ to IIS site root.'",
+    "iis:package": "npm run build && powershell -Command \"Compress-Archive -Path 'dist/*' -DestinationPath 'mw-portfolio-iis.zip' -Force\""
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "framer-motion": "^11.0.0",
+    "three": "^0.160.0",
+    "@react-three/fiber": "^8.15.0",
+    "@react-three/drei": "^9.90.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.2.1",
+    "vite": "^5.0.0",
+    "tailwindcss": "^3.4.0",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.4.0"
+  }
+}
